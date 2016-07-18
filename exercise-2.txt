@@ -1,0 +1,14 @@
+mysql> INSERT INTO Account (email, password, createdOn, modifiedOn) 
+    VALUES 
+        ("jessicamitch42@gmail.com", 
+        "password", 
+        "2016-07-18", 
+        "2016-07-18");
+        
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO AddressBook (accountID, name, createdOn, modifiedOn) VALUES ("01234567891", "Jessica", "2016-07-18", "2016-07-18");
+    Query OK, 1 row affected (0.01 sec)
+    
+mysql> INSERT INTO Entry (addressBookId, firstName, lastName, birthday, type, subtype) VALUES ("01234567891", "Jessica", "Mitchell", "1990-06-05", "home", "email");
+    Query OK, 1 row affected, 1 warning (0.01 sec)
