@@ -1,0 +1,13 @@
+Exercise 11
+
+How many Address Book Entries are not listed as other? 
+2800 rows in set (0.01 sec)
+SELECT * FROM Entry WHERE type!="other";
+
+
+How many Address Book Entries are listed as either home or work?
+2800 rows in set (0.01 sec) 
+
+How many Address Book Entries are listed as phones?
+600 rows in set (0.00 sec)
+mysql> SELECT * FROM Entry WHERE subtype="phone";
