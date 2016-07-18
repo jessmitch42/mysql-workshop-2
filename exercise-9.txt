@@ -1,0 +1,7 @@
+Exercise 9 :)
+
+How many Accounts exist? 1000
+
+How many Address Books exist? 1100
+
+How many Address Book Entries exist? 4000

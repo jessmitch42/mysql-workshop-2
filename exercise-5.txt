@@ -1,0 +1,16 @@
+
+mysql> SELECT * FROM Entry;
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    | id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    |  1 |    1234567891 | fake      | Mitchell | 1990-06-05 00:00:00 | home | email   |                | NULL           | NULL             | NULL            | NULL            |
+    |  2 |             0 | fake      | Miller   | NULL                | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+    |  3 |             0 | fake      | Martin   | NULL                | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    3 rows in set (0.00 sec)
+    
+mysql> TRUNCATE TABLE Entry;
+    Query OK, 0 rows affected (0.02 sec)
+
+mysql> SELECT * FROM Entry;
+    Empty set (0.00 sec)
