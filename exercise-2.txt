@@ -12,3 +12,7 @@ mysql> INSERT INTO AddressBook (accountID, name, createdOn, modifiedOn) VALUES (
     
 mysql> INSERT INTO Entry (addressBookId, firstName, lastName, birthday, type, subtype) VALUES ("01234567891", "Jessica", "Mitchell", "1990-06-05", "home", "email");
     Query OK, 1 row affected, 1 warning (0.01 sec)
+mysql> INSERT INTO Entry (firstName, lastName) VALUES ("Phil", "Miller");
+    Query OK, 1 row affected, 2 warnings (0.07 sec)
+mysql> INSERT INTO Entry (firstName, lastName) VALUES ("Maxime", "Martin");
+    Query OK, 1 row affected, 2 warnings (0.01 sec)

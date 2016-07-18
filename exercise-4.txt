@@ -1,0 +1,37 @@
+mysql> UPDATE Account SET email="fake@email.com" WHERE id=1;                           
+    Query OK, 1 row affected (0.00 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Account;
+    +----+----------------+----------+---------------------+---------------------+
+    | id | email          | password | createdOn           | modifiedOn          |
+    +----+----------------+----------+---------------------+---------------------+
+    |  1 | fake@email.com | password | 2016-07-18 00:00:00 | 2016-07-18 00:00:00 |
+    +----+----------------+----------+---------------------+---------------------+
+    1 row in set (0.00 sec)
+
+mysql> UPDATE AddressBook SET name="Fake" WHERE id=1;
+    Query OK, 1 row affected (0.00 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM AddressBook;
+    +----+------------+------+---------------------+---------------------+
+    | id | accountId  | name | createdOn           | modifiedOn          |
+    +----+------------+------+---------------------+---------------------+
+    |  1 | 1234567891 | Fake | 2016-07-18 00:00:00 | 2016-07-18 00:00:00 |
+    +----+------------+------+---------------------+---------------------+
+    1 row in set (0.00 sec)
+
+mysql> UPDATE Entry SET firstName="fake";
+    Query OK, 3 rows affected (0.01 sec)
+    Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> SELECT * FROM Entry;
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    | id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    |  1 |    1234567891 | fake      | Mitchell | 1990-06-05 00:00:00 | home | email   |                | NULL           | NULL             | NULL            | NULL            |
+    |  2 |             0 | fake      | Miller   | NULL                | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+    |  3 |             0 | fake      | Martin   | NULL                | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+    +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+    3 rows in set (0.00 sec)
