@@ -1,0 +1,13 @@
+Exercise 10
+
+How many Address Book Entries are listed as born before February 12th of 1982? 2687 rows in set (0.01 sec)
+    mysql> SELECT * FROM Entry WHERE birthday < "1982-02-12";
+        
+
+How many Address Book Entries are listed as born on or after January 1st of 1965? 2597 rows in set (0.01 sec)
+    mysql> SELECT * FROM Entry WHERE birthday >= "1965-01-01";
+    
+Which Address Book Entry is listed as being the oldest of age? Abigal Rollins (born Sept 2, 1945)
+mysql> SELECT * FROM Entry ORDER BY birthday DESC;
+
+ 2260 |            93 | Abigail     | Rollins     | 1945-09-02 09:21:58 | other | address | 194 Non Road                                             | Berlin                           | Berlin                         | Bolivia                                      | 791155          |
